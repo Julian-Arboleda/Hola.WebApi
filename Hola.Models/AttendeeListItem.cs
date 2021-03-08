@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Hola.Models
 {
-    public class Class1
-    {
+   public class AttendeeListItem
+    { 
+
     }
 }
