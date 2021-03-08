@@ -8,18 +8,21 @@ using System.Threading.Tasks;
 
 namespace Hola.Data
 {
-    public class Message
+   public class Attendee
     {
         [Key]
-        public int MessageId { get; set; }
+        public int AttendeeId { get; set; }
 
         [Required]
-        public string Content { get; set; }
-        public DateTime Created { get; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         [ForeignKey("User")]
         public string Id { get; set; }
-        public virtual ApplicationUser  User {get;set;} 
-        
+        public virtual ApplicationUser User { get; set; }
+
+        [ForeignKey("Event")]
+        public int EventId { get; set; }
+        public virtual Event Event { get; set; }
     }
 }
