@@ -16,8 +16,10 @@ namespace Hola.Data
         [Required]
         public string Content { get; set; }
         public DateTime Created { get; }
-        [ForeignKey("user")]
-        public int userFK { get; set; }
 
+        [ForeignKey(nameof(ApplicationUser))]
+        public Guid UserId { get; set; }
+        public virtual ApplicationUser  User {get;set;} 
+        
     }
 }
