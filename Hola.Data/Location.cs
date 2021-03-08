@@ -13,7 +13,6 @@ namespace Hola.Data
         [Key]
         public int LocationId { get; set; }
 
-        [Required]
         public string Name { get; set; }
 
         [Required]
