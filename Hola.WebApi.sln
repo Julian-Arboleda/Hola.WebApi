@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.WebApi", "Hola.WebApi\Hola.WebApi.csproj", "{7D1A1CF3-4061-4B03-8F19-C13DB442184B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Data", "Hola.Data\Hola.Data.csproj", "{0ADA9F11-B315-4B0A-9207-B7426120B223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Models", "Hola.Models\Hola.Models.csproj", "{F0C74AB7-4D5E-44B4-B9F0-945871558C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Services", "Hola.Services\Hola.Services.csproj", "{360F3113-84B7-48B7-B4C9-F47692D6EF58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D1A1CF3-4061-4B03-8F19-C13DB442184B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1A1CF3-4061-4B03-8F19-C13DB442184B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1A1CF3-4061-4B03-8F19-C13DB442184B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1A1CF3-4061-4B03-8F19-C13DB442184B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ADA9F11-B315-4B0A-9207-B7426120B223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ADA9F11-B315-4B0A-9207-B7426120B223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ADA9F11-B315-4B0A-9207-B7426120B223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ADA9F11-B315-4B0A-9207-B7426120B223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0C74AB7-4D5E-44B4-B9F0-945871558C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0C74AB7-4D5E-44B4-B9F0-945871558C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0C74AB7-4D5E-44B4-B9F0-945871558C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0C74AB7-4D5E-44B4-B9F0-945871558C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{360F3113-84B7-48B7-B4C9-F47692D6EF58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360F3113-84B7-48B7-B4C9-F47692D6EF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360F3113-84B7-48B7-B4C9-F47692D6EF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{360F3113-84B7-48B7-B4C9-F47692D6EF58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {919D5A3C-F6B9-40CE-B282-27A492D8D28D}
+	EndGlobalSection
+EndGlobal
