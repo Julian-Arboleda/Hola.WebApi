@@ -14,6 +14,7 @@ namespace Hola.Models
         [Required]
         public string Description { get; set; }
         public string Host { get; set; }
+        [Required]
         public DateTime DateCreated { get; set; }
 
     }

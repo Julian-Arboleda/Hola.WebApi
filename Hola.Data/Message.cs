@@ -15,7 +15,7 @@ namespace Hola.Data
 
         [Required]
         public string Content { get; set; }
-        public DateTime Created { get; }
+        public DateTime DateCreated { get; set; }
 
         [ForeignKey("User")]
         public string Id { get; set; }
