@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hola.Models
 {
-    public class AttendeeListItem
+    public class AttendeeCreate
     {
         public int AttendeeID { get; set; }
         public string FirstName { get; set; }

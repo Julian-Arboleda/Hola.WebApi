@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttendeeCreate.cs" />
     <Compile Include="AttendeeListItem.cs" />
     <Compile Include="EventCreate.cs" />
     <Compile Include="EventListItem.cs" />
