@@ -23,8 +23,6 @@ namespace Hola.Data
         [Required]
         public string City { get; set; }
 
-        [ForeignKey(nameof(Event))]
-        public int EventId { get; set; }
-        public virtual Event Event { get; set; }
+        
     }
 }
