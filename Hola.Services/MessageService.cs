@@ -22,7 +22,7 @@ namespace Hola.Services
             var entity =
                 new Message()
                 {
-                    //MessageId = model.MessageId,
+                    CreatorId = _userId,
                     Content = model.Content,
                     DateCreated = model.DateCreated
                 };
@@ -34,6 +34,26 @@ namespace Hola.Services
             }
         }
 
+        public IEnumerable<MessageListItem> GetMessages()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Messages
+                        .Where(e => e.CreatorId == _userId)
+                        .Select(
+                            e =>
+                                new MessageListItem
+                                {
+                                    MessageId = e.MessageId,
+                                    Content = e.Content,
+                                    DateCreated = e.DateCreated
+                                }
+                        );
 
+                return query.ToArray();
+            }
+        }
     }
 }

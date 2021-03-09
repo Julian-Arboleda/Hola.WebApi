@@ -22,10 +22,9 @@ namespace Hola.Services
             var entity =
                 new Event()
                 {
-                    // EventId = model.EventId,
+                    HostId = _userId,
                     Name = model.Name,
                     Description = model.Description,
-                    Host = model.Host,
                     DateCreated = model.DateCreated,
                     
                 };
@@ -34,6 +33,28 @@ namespace Hola.Services
             {
                 ctx.Events.Add(entity);
                 return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public IEnumerable<EventListItem> GetEvents()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Events
+                        .Where(e => e.HostId == _userId)
+                        .Select(
+                            e =>
+                                new EventListItem
+                                {
+                                    EventId = e.EventId,
+                                    Name = e.Name,
+                                    DateCreated = e.DateCreated
+                                }
+                        );
+
+                return query.ToArray();
             }
         }
     }

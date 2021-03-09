@@ -16,6 +16,8 @@ namespace Hola.Data
         [Required]
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        //[Required]
+        public Guid CreatorId { get; set; }
 
         [ForeignKey("User")]
         public string Id { get; set; }

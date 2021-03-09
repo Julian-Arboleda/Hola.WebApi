@@ -12,10 +12,12 @@ namespace Hola.Data
     {
         [Key]
         public int MessageId { get; set; }
+        public Guid CreatorId { get; set; }
 
         [Required]
         public string Content { get; set; }
-        public DateTime DateCreated { get; set; }
+        public DateTimeOffset DateCreated { get; set; }
+        public DateTimeOffset? ModifiedDateCreated { get; set; }
 
         [ForeignKey("User")]
         public string Id { get; set; }
