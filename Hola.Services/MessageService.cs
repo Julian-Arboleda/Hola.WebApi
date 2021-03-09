@@ -22,7 +22,7 @@ namespace Hola.Services
             var entity =
                 new Message()
                 {
-                    // LocationId = _userId,
+                    //MessageId = model.MessageId,
                     Content = model.Content,
                     DateCreated = model.DateCreated
                 };
@@ -33,5 +33,7 @@ namespace Hola.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+
     }
 }

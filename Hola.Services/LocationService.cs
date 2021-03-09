@@ -22,7 +22,7 @@ namespace Hola.Services
             var entity =
                 new Location()
                 {
-                   // LocationId = _userId,
+                   // LocationId = model.LocationId,
                     Name = model.Name,
                     Country = model.Country,
                     State = model.State,

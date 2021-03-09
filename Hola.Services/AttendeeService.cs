@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hola.Data;
+using Hola.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,7 @@ namespace Hola.Services
             var entity =
                 new Attendee()
                 {
-                    AttendeeId = Model.AttendeeID,
+                    // AttendeeId = Model.AttendeeId,
                     FirstName = Model.FirstName,
                     LastName = Model.LastName,
                 };
@@ -22,6 +24,8 @@ namespace Hola.Services
                 ctx.Attendee.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
+
+
         }
     }
 }
