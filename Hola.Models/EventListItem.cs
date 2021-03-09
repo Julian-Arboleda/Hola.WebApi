@@ -10,6 +10,6 @@ namespace Hola.Models
     {
         public int EventId { get; set; }
         public string Name { get; set; }
-        public DateTime DateCreated { get; set; }
+        public DateTimeOffset DateCreated { get; set; }
     }
 }

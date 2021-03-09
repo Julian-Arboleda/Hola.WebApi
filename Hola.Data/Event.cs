@@ -17,8 +17,9 @@ namespace Hola.Data
         public string Name { get; set; }
         [Required]
         public string Description { get; set; }
-        public string Host { get; set; }
-        public DateTime DateCreated { get; set; }
+        public Guid HostId { get; set; }
+        public DateTimeOffset DateCreated { get; set; }
+        public DateTimeOffset? ModifiedDateCreated { get; set; }
 
         [ForeignKey(nameof(Location))]
         public int LocationId { get; set; }

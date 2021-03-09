@@ -22,7 +22,7 @@ namespace Hola.Services
             var entity =
                 new Location()
                 {
-                   // LocationId = model.LocationId,
+                    CreatorId = _userId,
                     Name = model.Name,
                     Country = model.Country,
                     State = model.State,
@@ -33,6 +33,30 @@ namespace Hola.Services
             {
                 ctx.Locations.Add(entity);
                 return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public IEnumerable<LocationListItem> GetLocations()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Locations
+                        .Where(e => e.CreatorId == _userId)
+                        .Select(
+                            e =>
+                                new LocationListItem
+                                {
+                                    LocationId = e.LocationId,
+                                    Name = e.Name,
+                                    Country = e.Country,
+                                    State = e.State,
+                                    City = e.City
+                                }
+                        );
+
+                return query.ToArray();
             }
         }
     }
