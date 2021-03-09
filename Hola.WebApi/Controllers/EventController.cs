@@ -34,12 +34,13 @@ namespace Hola.WebApi.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = CreateNoteService();
+            var service = CreateEventService();
 
-            if (!service.CreateNote(note))
+            if (!service.CreateEvent(event))
                 return InternalServerError();
 
             return Ok();
         }
-    }   
+        }
+    }
 }
