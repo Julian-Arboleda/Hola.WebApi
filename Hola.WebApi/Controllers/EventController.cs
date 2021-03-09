@@ -28,18 +28,18 @@ namespace Hola.WebApi.Controllers
             return Ok(events);
         }
 
-        [HttpPost]
+       /* [HttpPost]
         public IHttpActionResult PostEvent(EventCreate event)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = CreateNoteService();
+            var service = CreateEventService();
 
-            if (!service.CreateNote(note))
+            if (!service.CreateEvent(event))
                 return InternalServerError();
 
             return Ok();
-        }
+        }*/
     }   
 }

@@ -20,11 +20,11 @@ namespace Hola.WebApi.Controllers
         }
     }
 
-    [HttpGet]
+    /*[HttpGet]
     public IHttpActionResult Get()
     {
         AttendeeService attendeeService = CreateAttendeeService();
-        var attendees = attendeeService.GetAttendee();
+        var attendees = attendeeService.GetAttendees();
         return Ok(attendees);
-    }
+    }*/
 }
