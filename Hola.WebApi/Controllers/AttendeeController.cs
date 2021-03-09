@@ -1,4 +1,5 @@
-﻿using Hola.Services;
+﻿using Hola.Models;
+using Hola.Services;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -26,5 +27,28 @@ namespace Hola.WebApi.Controllers
             var attendees = attendeeService.GetAttendees();
             return Ok(attendees);
         }
+
+        [HttpPut]
+        public IHttpActionResult Put(AttendeeEdit attendee)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateAttendeeService();
+            if (!service.UpdateAttendee(attendee))
+                return InternalServerError();
+            return Ok();
+        }
+
+        
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateAttendeeService();
+            if (!service.DeleteAttendee(id))
+                return InternalServerError();
+            return Ok();
+        }
+
+
     }
 }

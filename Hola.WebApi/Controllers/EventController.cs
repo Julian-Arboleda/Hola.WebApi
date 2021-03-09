@@ -28,7 +28,7 @@ namespace Hola.WebApi.Controllers
             return Ok(events);
         }
 
-       [HttpPost]
+        [HttpPost]
         public IHttpActionResult CreateEvent(EventCreate eventCreate)
         {
             if (!ModelState.IsValid)
