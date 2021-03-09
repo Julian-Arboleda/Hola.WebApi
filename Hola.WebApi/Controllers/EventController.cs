@@ -28,7 +28,7 @@ namespace Hola.WebApi.Controllers
             return Ok(events);
         }
 
-        [HttpPost]
+       /* [HttpPost]
         public IHttpActionResult PostEvent(EventCreate event)
         {
             if (!ModelState.IsValid)
@@ -40,7 +40,6 @@ namespace Hola.WebApi.Controllers
                 return InternalServerError();
 
             return Ok();
-        }
-        }
-    }
+        }*/
+    }   
 }
