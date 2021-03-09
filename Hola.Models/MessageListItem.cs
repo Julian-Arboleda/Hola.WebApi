@@ -10,6 +10,6 @@ namespace Hola.Models
     {
         public int MessageId { get; set; }
         public string Content { get; set; }
-        public DateTime Created { get; }
+        public DateTimeOffset DateCreated { get; set; }
     }
 }

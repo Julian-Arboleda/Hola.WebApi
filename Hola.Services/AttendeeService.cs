@@ -10,19 +10,47 @@ namespace Hola.Services
 {
     public class AttendeeService
     {
-        public bool createAttendee(AttendeeCreate Model)
+        private readonly Guid _userId;
+
+        public AttendeeService(Guid userId)
+        {
+            _userId = userId;
+        }
+        public bool CreateAttendee(AttendeeCreate Model)
         {
             var entity =
                 new Attendee()
                 {
-                    AttendeeId = Model.AttendeeID,
+                    CreatorId = _userId,
                     FirstName = Model.FirstName,
                     LastName = Model.LastName,
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Attendee.Add(entity);
+                ctx.Attendees.Add(entity);
                 return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public IEnumerable<AttendeeListItem> GetAttendees()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Attendees
+                        .Where(e => e.CreatorId == _userId)
+                        .Select(
+                            e =>
+                                new AttendeeListItem
+                                {
+                                    AttendeeId = e.AttendeeId,
+                                    FirstName = e.FirstName,
+                                    LastName = e.LastName
+                                }
+                        );
+
+                return query.ToArray();
             }
         }
     }

@@ -8,7 +8,7 @@ namespace Hola.Models
 {
     public class AttendeeListItem
     {
-        public int AttendeeID { get; set; }
+        public int AttendeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }
