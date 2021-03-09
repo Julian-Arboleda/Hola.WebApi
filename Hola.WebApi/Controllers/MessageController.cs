@@ -42,6 +42,37 @@ namespace Hola.WebApi.Controllers
             return Ok();
         }
 
+        [HttpGet]
+        public IHttpActionResult GetMessage(int id)
+        {
+            MessageService messageService = CreateMessageService();
+            var message = messageService.GetMessageById(id);
+            return Ok(message);
+        }
 
+        [HttpPut]
+        public IHttpActionResult Put(MessageEdit message)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateMessageService();
+
+            if (!service.UpdateMessage(message))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateMessageService();
+
+            if (!service.DeleteMessage(id))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }

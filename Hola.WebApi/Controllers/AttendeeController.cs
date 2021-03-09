@@ -28,7 +28,7 @@ namespace Hola.WebApi.Controllers
             return Ok(attendees);
         }
 
-        //Update Attendee
+        [HttpPut]
         public IHttpActionResult Put(AttendeeEdit attendee)
         {
             if (!ModelState.IsValid)
@@ -39,8 +39,8 @@ namespace Hola.WebApi.Controllers
             return Ok();
         }
 
-        //DeleteAttendee
-
+        
+        [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateAttendeeService();
@@ -48,6 +48,7 @@ namespace Hola.WebApi.Controllers
                 return InternalServerError();
             return Ok();
         }
+
 
     }
 }

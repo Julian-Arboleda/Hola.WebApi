@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Hola.Models
 {
-    public class MessageListItem
+   public class MessageEdit
     {
         public int MessageId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public DateTimeOffset DateCreated { get; set; }
     }
 }

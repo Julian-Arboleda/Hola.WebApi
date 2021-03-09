@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hola.Services
 {
-   public class MessageService
+    public class MessageService
     {
         private readonly Guid _userId;
 
@@ -23,6 +23,7 @@ namespace Hola.Services
                 new Message()
                 {
                     CreatorId = _userId,
+                    Title = model.Title,
                     Content = model.Content,
                     DateCreated = model.DateCreated
                 };
@@ -46,6 +47,7 @@ namespace Hola.Services
                             e =>
                                 new MessageListItem
                                 {
+                                    Title = e.Title,
                                     MessageId = e.MessageId,
                                     Content = e.Content,
                                     DateCreated = e.DateCreated
@@ -55,5 +57,58 @@ namespace Hola.Services
                 return query.ToArray();
             }
         }
+
+        public MessageDetail GetMessageById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Messages
+                        .Single(e => e.MessageId == id && e.CreatorId == _userId);
+                return
+                    new MessageDetail
+                    {
+                        Title = entity.Title,
+                        MessageId = entity.MessageId,
+                        Content = entity.Content,
+                        DateCreated = entity.DateCreated,
+                        ModifiedDateCreated = entity.ModifiedDateCreated
+                    };
+            }
+        }
+
+        public bool UpdateMessage(MessageEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Messages
+                        .Single(e => e.MessageId == model.MessageId && e.CreatorId == _userId);
+
+                entity.Title = model.Title;
+                entity.Content = model.Content;
+                entity.ModifiedDateCreated = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteMessage(int messageId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Messages
+                        .Single(e => e.MessageId == messageId && e.CreatorId == _userId);
+
+                ctx.Messages.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
     }
 }
