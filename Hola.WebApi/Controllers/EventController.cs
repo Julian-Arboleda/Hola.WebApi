@@ -1,4 +1,5 @@
-﻿using Hola.Services;
+﻿using Hola.Models;
+using Hola.Services;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -18,5 +19,27 @@ namespace Hola.WebApi.Controllers
             var eventService = new EventService(userId);
             return eventService;
         }
-    }
+
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            EventService eventService = CreateEventService();
+            var events = eventService.GetEvents();
+            return Ok(events);
+        }
+
+        [HttpPost]
+        public IHttpActionResult PostEvent(EventCreate event)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateNoteService();
+
+            if (!service.CreateNote(note))
+                return InternalServerError();
+
+            return Ok();
+        }
+    }   
 }

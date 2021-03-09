@@ -1,4 +1,5 @@
-﻿using Hola.Services;
+﻿using Hola.Models;
+using Hola.Services;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -19,5 +20,26 @@ namespace Hola.WebApi.Controllers
             return locationService;
         }
 
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            LocationService locationService = CreateLocationService();
+            var locations = locationService.GetLocations();
+            return Ok(locations);
+        }
+
+        [HttpPost]
+        public IHttpActionResult PostLocation(LocationCreate location)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateLocationService();
+
+            if (!service.CreateLocation(location))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }
