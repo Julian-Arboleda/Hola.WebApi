@@ -41,5 +41,31 @@ namespace Hola.WebApi.Controllers
 
             return Ok();
         }
+
+        [HttpPut]
+        public IHttpActionResult Put(EventEdit eventupdate)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateEventService();
+
+            if (!service.UpdateEvent(eventupdate))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateEventService();
+
+            if (!service.DeleteEvent(id))
+                return InternalServerError();
+
+            return Ok();
+        }
+
     }   
 }
