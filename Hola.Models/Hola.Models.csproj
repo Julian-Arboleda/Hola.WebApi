@@ -63,8 +63,10 @@
     <Compile Include="AttendeeCreate.cs" />
     <Compile Include="AttendeeListItem.cs" />
     <Compile Include="EventCreate.cs" />
+    <Compile Include="EventEdit.cs" />
     <Compile Include="EventListItem.cs" />
     <Compile Include="LocationCreate.cs" />
+    <Compile Include="LocationEdit.cs" />
     <Compile Include="LocationListItem.cs" />
     <Compile Include="MessageCreate.cs" />
     <Compile Include="MessageListItem.cs" />

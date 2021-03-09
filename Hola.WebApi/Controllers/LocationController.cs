@@ -41,5 +41,30 @@ namespace Hola.WebApi.Controllers
 
             return Ok();
         }
+
+        [HttpPut]
+        public IHttpActionResult Put(LocationEdit location)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("not a valid Location");
+
+            var service = CreateLocationService();
+
+            if (!service.UpdateLocation(location))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateLocationService();
+            if (!service.DeleteLocation(id))
+            return InternalServerError();
+
+            return Ok();
+
+        }
     }
 }

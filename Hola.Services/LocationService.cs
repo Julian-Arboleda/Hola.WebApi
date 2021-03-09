@@ -58,6 +58,39 @@ namespace Hola.Services
 
                 return query.ToArray();
             }
+        }     
+
+
+        public bool UpdateLocation(LocationEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var updatedlocation =
+                    ctx
+                    .Locations
+                    .Single(e => e.LocationId == model.LocationId && e.CreatorId == _userId);
+                updatedlocation.LocationId = model.LocationId;
+                updatedlocation.Country = model.Country;
+                updatedlocation.State = model.State;
+                updatedlocation.City = model.City;
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteLocation(int locationId)
+        {
+            using (var ctx =  new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Locations
+                        .Single(e => e.LocationId == locationId && e.CreatorId == _userId);
+
+                ctx.Locations.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+
         }
     }
 }

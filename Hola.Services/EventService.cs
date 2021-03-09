@@ -57,5 +57,39 @@ namespace Hola.Services
                 return query.ToArray();
             }
         }
+
+        public bool UpdateEvent(EventEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Events
+                        .Single(e => e.EventId == model.EventId && e.HostId == _userId);
+                entity.EventId = model.EventId;
+                entity.Name = model.Name;
+                entity.Description = model.Description;
+                entity.DateCreated = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+
+        }
+
+        public bool DeleteEvent(int eventid)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Events
+                        .Single(e => e.EventId == eventid && e.HostId == _userId);
+
+                ctx.Events.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+
+        }
     }
 }
