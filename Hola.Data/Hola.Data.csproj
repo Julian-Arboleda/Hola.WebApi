@@ -77,12 +77,21 @@
     <Compile Include="Location.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="Migrations\202103092001175_update3.cs" />
+    <Compile Include="Migrations\202103092001175_update3.Designer.cs">
+      <DependentUpon>202103092001175_update3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202103092001175_update3.resx">
+      <DependentUpon>202103092001175_update3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
