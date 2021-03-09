@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendeeCreate.cs" />
+    <Compile Include="AttendeeEdit.cs" />
     <Compile Include="AttendeeListItem.cs" />
     <Compile Include="EventCreate.cs" />
     <Compile Include="EventListItem.cs" />
