@@ -22,11 +22,12 @@ namespace Hola.Services
             var entity =
                 new Event()
                 {
-                    // LocationId = _userId,
+                    // EventId = model.EventId,
                     Name = model.Name,
                     Description = model.Description,
                     Host = model.Host,
                     DateCreated = model.DateCreated,
+                    
                 };
 
             using (var ctx = new ApplicationDbContext())
