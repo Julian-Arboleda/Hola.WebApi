@@ -20,6 +20,7 @@ namespace Hola.WebApi.Controllers
             return attendeeService;
         }
 
+
         [HttpGet]
         public IHttpActionResult Get()
         {
@@ -27,6 +28,22 @@ namespace Hola.WebApi.Controllers
             var attendees = attendeeService.GetAttendees();
             return Ok(attendees);
         }
+        
+        [HttpPost]
+        public IHttpActionResult Post(AttendeeCreate attendee)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateAttendeeService();
+
+            if (!service.CreateAttendee(attendee))
+                return InternalServerError();
+
+            return Ok();
+
+        }
+
 
         [HttpPut]
         public IHttpActionResult Put(AttendeeEdit attendee)

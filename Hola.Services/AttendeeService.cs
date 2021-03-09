@@ -16,14 +16,14 @@ namespace Hola.Services
         {
             _userId = userId;
         }
-        public bool CreateAttendee(AttendeeCreate Model)
+        public bool CreateAttendee(AttendeeCreate model)
         {
             var entity =
                 new Attendee()
                 {
                     CreatorId = _userId,
-                    FirstName = Model.FirstName,
-                    LastName = Model.LastName,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
                 };
             using (var ctx = new ApplicationDbContext())
             {
