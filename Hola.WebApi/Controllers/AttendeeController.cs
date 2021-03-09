@@ -18,13 +18,13 @@ namespace Hola.WebApi.Controllers
             var attendeeService = new AttendeeService(userId);
             return attendeeService;
         }
-    }
 
-    /*[HttpGet]
-    public IHttpActionResult Get()
-    {
-        AttendeeService attendeeService = CreateAttendeeService();
-        var attendees = attendeeService.GetAttendees();
-        return Ok(attendees);
-    }*/
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            AttendeeService attendeeService = CreateAttendeeService();
+            var attendees = attendeeService.GetAttendees();
+            return Ok(attendees);
+        }
+    }
 }
