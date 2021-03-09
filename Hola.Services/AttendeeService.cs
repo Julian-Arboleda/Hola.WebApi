@@ -53,5 +53,34 @@ namespace Hola.Services
                 return query.ToArray();
             }
         }
+
+        //Update
+        public bool UpdateAttendee(AttendeeEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Attendees
+                    .Single(e => e.FirstName == model.FirstName && e.LastName == model.LastName);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        //Delete
+
+        public bool DeleteAttendee(int AttendeeId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Attendees
+                    .Single(e => e.AttendeeId == AttendeeId && e.CreatorId == _userId);
+                ctx.Attendees.Remove(entity);
+                    return ctx.SaveChanges() == 1;
+            }
+        }
+
     }
 }
