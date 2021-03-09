@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace Hola.Models
 {
-   public class MessageCreate
+    public class MessageDetail
     {
-        [Required]
+        public int MessageId { get; set; }
+        public Guid CreatorId { get; set; }
         public string Title { get; set; }
-        [Required]
-        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
-        [MaxLength(1000, ErrorMessage = "There are too many characters in this field.")]
         public string Content { get; set; }
+        [Display(Name = "Created")]
         public DateTimeOffset DateCreated { get; set; }
+        [Display(Name = "Modified")]
+        public DateTimeOffset? ModifiedDateCreated { get; set; }
     }
 }

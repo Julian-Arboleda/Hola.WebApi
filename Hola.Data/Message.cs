@@ -14,6 +14,8 @@ namespace Hola.Data
         public int MessageId { get; set; }
         [Required]
         public Guid CreatorId { get; set; }
+        [Required]
+        public string Title { get; set; }
 
         [Required]
         public string Content { get; set; }
