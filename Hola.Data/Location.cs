@@ -21,7 +21,7 @@ namespace Hola.Data
         public string State { get; set; }
         [Required]
         public string City { get; set; }
-
+        [Required]
         public Guid CreatorId { get; set; }
 
 
