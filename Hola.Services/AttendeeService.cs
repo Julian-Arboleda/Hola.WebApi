@@ -24,6 +24,7 @@ namespace Hola.Services
                     CreatorId = _userId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
+                    EventId = model.EventId
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -62,7 +63,11 @@ namespace Hola.Services
                 var entity =
                     ctx
                     .Attendees
-                    .Single(e => e.FirstName == model.FirstName && e.LastName == model.LastName);
+                    .Single(e => 
+                    e.FirstName == model.FirstName &&
+                    e.LastName == model.LastName
+                    
+                    );
                 return ctx.SaveChanges() == 1;
             }
         }

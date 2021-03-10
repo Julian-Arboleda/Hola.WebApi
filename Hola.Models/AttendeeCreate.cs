@@ -13,5 +13,7 @@ namespace Hola.Models
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
+        [Required]
+        public int EventId { get; set; }
     }
 }
