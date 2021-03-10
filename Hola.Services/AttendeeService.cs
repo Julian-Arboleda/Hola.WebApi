@@ -69,7 +69,7 @@ namespace Hola.Services
                 entity.LastName = model.LastName;
                 entity.EventId = model.EventId;
                 entity.AttendeeId = model.AttendeeId;
-                   
+              
 
                 return ctx.SaveChanges() == 1;
             }
