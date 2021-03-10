@@ -64,7 +64,12 @@ namespace Hola.Services
                 var entity =
                     ctx
                     .Attendees
-                    .SingleOrDefault(e => e.FirstName == model.FirstName && e.LastName == model.LastName && e.EventId == model.EventId && e.AttendeeId == model.AttendeeId);
+                    .Single(e => e.EventId == model.EventId && e.AttendeeId == model.AttendeeId);
+                entity.FirstName = model.FirstName;
+                entity.LastName = model.LastName;
+                entity.EventId = model.EventId;
+                entity.AttendeeId = model.AttendeeId;
+              
 
                 return ctx.SaveChanges() == 1;
             }
