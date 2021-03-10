@@ -15,6 +15,5 @@ namespace Hola.Models
         public int EventId { get; set; }
         public int AttendeeId { get; set; }
 
-
     }
 }

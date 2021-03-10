@@ -65,6 +65,9 @@ namespace Hola.Services
                     ctx
                     .Attendees
                     .Single(e => e.FirstName == model.FirstName && e.LastName == model.LastName && e.EventId == model.EventId && e.AttendeeId == model.AttendeeId);
+
+                    );
+
                 return ctx.SaveChanges() == 1;
             }
         }
