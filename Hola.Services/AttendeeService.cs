@@ -24,6 +24,7 @@ namespace Hola.Services
                     CreatorId = _userId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
+                    EventId = model.EventId
                 };
             using (var ctx = new ApplicationDbContext())
             {

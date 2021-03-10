@@ -16,6 +16,8 @@ namespace Hola.Models
         public string Host { get; set; }
         [Required]
         public DateTimeOffset DateCreated { get; set;}
+        [Required]
+        public int LocationId { get; set; }
 
     }
 }

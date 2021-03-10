@@ -26,6 +26,7 @@ namespace Hola.Services
                     Name = model.Name,
                     Description = model.Description,
                     DateCreated = model.DateCreated,
+                    LocationId = model.LocationId
                     
                 };
 

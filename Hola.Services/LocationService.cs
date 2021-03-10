@@ -69,7 +69,7 @@ namespace Hola.Services
                     ctx
                     .Locations
                     .Single(e => e.LocationId == model.LocationId && e.CreatorId == _userId);
-                updatedlocation.LocationId = model.LocationId;
+                updatedlocation.LocationId = model.LocationId;          
                 updatedlocation.Country = model.Country;
                 updatedlocation.State = model.State;
                 updatedlocation.City = model.City;
