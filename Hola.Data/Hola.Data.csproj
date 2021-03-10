@@ -77,13 +77,9 @@
     <Compile Include="Location.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Message.cs" />
-    <Compile Include="Migrations\202103092001175_update3.cs" />
-    <Compile Include="Migrations\202103092001175_update3.Designer.cs">
-      <DependentUpon>202103092001175_update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103092022375_mnu.cs" />
-    <Compile Include="Migrations\202103092022375_mnu.Designer.cs">
-      <DependentUpon>202103092022375_mnu.cs</DependentUpon>
+    <Compile Include="Migrations\202103092039453_one.cs" />
+    <Compile Include="Migrations\202103092039453_one.Designer.cs">
+      <DependentUpon>202103092039453_one.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202103092055513_updaa.cs" />
     <Compile Include="Migrations\202103092055513_updaa.Designer.cs">
@@ -97,11 +93,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103092001175_update3.resx">
-      <DependentUpon>202103092001175_update3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103092022375_mnu.resx">
-      <DependentUpon>202103092022375_mnu.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202103092039453_one.resx">
+      <DependentUpon>202103092039453_one.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103092055513_updaa.resx">
       <DependentUpon>202103092055513_updaa.cs</DependentUpon>

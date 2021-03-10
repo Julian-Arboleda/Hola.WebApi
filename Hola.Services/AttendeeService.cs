@@ -47,7 +47,8 @@ namespace Hola.Services
                                 {
                                     AttendeeId = e.AttendeeId,
                                     FirstName = e.FirstName,
-                                    LastName = e.LastName
+                                    LastName = e.LastName,
+                                    EventId = e.EventId
                                 }
                         );
 
@@ -63,11 +64,10 @@ namespace Hola.Services
                 var entity =
                     ctx
                     .Attendees
-                    .Single(e => 
-                    e.FirstName == model.FirstName &&
-                    e.LastName == model.LastName
-                    
+                    .Single(e => e.FirstName == model.FirstName && e.LastName == model.LastName && e.EventId == model.EventId && e.AttendeeId == model.AttendeeId);
+
                     );
+
                 return ctx.SaveChanges() == 1;
             }
         }
