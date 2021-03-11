@@ -51,7 +51,8 @@ namespace Hola.Services
                                 {
                                     EventId = e.EventId,
                                     Name = e.Name,
-                                    DateCreated = e.DateCreated
+                                    DateCreated = e.DateCreated,
+                                    LocationId = e.LocationId
                                 }
                         );
 
@@ -102,14 +103,16 @@ namespace Hola.Services
                 var query =
                     ctx
                         .Events
-                        .Where(e => e.HostId == _userId && locationid == e.LocationId)
+                        .Where(e => e.HostId == _userId && e.LocationId == locationid)
                         .Select(
                             e =>
                                 new EventListItem
                                 {
-                                    LocationId = e.LocationId,
-                                   
-                                   
+                                    EventId = e.EventId,
+                                    Name = e.Name,
+                                    DateCreated = e.DateCreated,
+                                    LocationId = e.LocationId
+
                                 }
                         );
 
