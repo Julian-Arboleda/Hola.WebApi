@@ -11,5 +11,6 @@ namespace Hola.Models
         public int EventId { get; set; }
         public string Name { get; set; }
         public DateTimeOffset DateCreated { get; set; }
+        public int? LocationId { get; set; }
     }
 }
