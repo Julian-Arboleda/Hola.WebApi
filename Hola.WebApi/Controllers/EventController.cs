@@ -28,6 +28,14 @@ namespace Hola.WebApi.Controllers
             return Ok(events);
         }
 
+        [HttpGet]
+        public IHttpActionResult GetEventByLocationId(int locationId)
+        {
+            EventService eventService = CreateEventService();
+            var events = eventService.GetEventsByLocationId(locationId);
+            return Ok(events);
+        }
+
         [HttpPost]
         public IHttpActionResult CreateEvent(EventCreate eventCreate)
         {

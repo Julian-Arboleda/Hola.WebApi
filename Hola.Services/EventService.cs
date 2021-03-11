@@ -59,6 +59,8 @@ namespace Hola.Services
             }
         }
 
+        
+
         public bool UpdateEvent(EventEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -91,6 +93,28 @@ namespace Hola.Services
                 return ctx.SaveChanges() == 1;
             }
 
+        }
+
+        public IEnumerable<EventListItem> GetEventsByLocationId(int locationid)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Events
+                        .Where(e => e.HostId == _userId && locationid == e.LocationId)
+                        .Select(
+                            e =>
+                                new EventListItem
+                                {
+                                    LocationId = e.LocationId,
+                                   
+                                   
+                                }
+                        );
+
+                return query.ToArray();
+            }
         }
     }
 }
