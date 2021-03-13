@@ -51,13 +51,16 @@ namespace Hola.Services
                                 {
                                     EventId = e.EventId,
                                     Name = e.Name,
-                                    DateCreated = e.DateCreated
+                                    DateCreated = e.DateCreated,
+                                    LocationId = e.LocationId
                                 }
                         );
 
                 return query.ToArray();
             }
         }
+
+        
 
         public bool UpdateEvent(EventEdit model)
         {
@@ -91,6 +94,30 @@ namespace Hola.Services
                 return ctx.SaveChanges() == 1;
             }
 
+        }
+
+        public IEnumerable<EventListItem> GetEventsByLocationId(int locationid)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Events
+                        .Where(e => e.HostId == _userId && e.LocationId == locationid)
+                        .Select(
+                            e =>
+                                new EventListItem
+                                {
+                                    EventId = e.EventId,
+                                    Name = e.Name,
+                                    DateCreated = e.DateCreated,
+                                    LocationId = e.LocationId
+
+                                }
+                        );
+
+                return query.ToArray();
+            }
         }
     }
 }
