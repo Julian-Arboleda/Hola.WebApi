@@ -11,7 +11,7 @@
 ⋅ Find people who are intersted in the same type of events<br/>
 
 
-### Downloads: <br/>
+### Downloads <br/>
 [Download](https://visualstudio.microsoft.com/downloads/) and install Visual Studio.<br/>
 [Download](https://www.postman.com/downloads/) and install the Postman App.<br/>
 [Download](https://github.com/Julian-Arboleda/Hola.WebApi/archive/master.zip) the newest version of ¡HOLA! to a location you can remember.<br/>
