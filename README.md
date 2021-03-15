@@ -12,7 +12,8 @@
 
 
 ### HOW TO INSTALL<br/>
-
+[Download](https://visualstudio.microsoft.com/downloads/) and install Visual Studio.<br/>
+[Download](https://www.postman.com/downloads/) and install the Postman App.<br/>
 [Download](https://github.com/Julian-Arboleda/Hola.WebApi/archive/master.zip) the newest version of ¡HOLA! to a location you can remember.<br/>
 Drag and drop the Hola.WebApi-Master folder from the file you dowloaded to unzip it.<br/>
 Double click the Hola.WebAPI.sln file inside the folder you just moved to launch the program using Visual Studio.<br/>
@@ -22,12 +23,18 @@ Double click the Hola.WebAPI.sln file inside the folder you just moved to launch
 Now that you have the program open in Visual Studio, press the green Play button on the toolbar at the top.<br/>
 A window should open that looks like this: ![First Web Page Run](https://i.imgur.com/5hOKZ7s.png "Finding Your Port") <br/>
 
+Copy the information from your window that is in the same spot as the red box in the example. Note that the information will likely not be the same as the example. <br/>
+Using the Port information you just copied, you are now able to use the Postman App to test our API!<br/>
+
 
 ### Resources<br/>
-Trello<br/>
-Postman<br/>
-Database Relationship Diagram<br/>
-GIT<br/>
+[HOLA! Trello](https://trello.com/b/GmhSRDnQ/hola)<br/>
+[TeamGIT Postman](https://teamgit.postman.co/team)<br/>
+[Database Diagram](https://dbdiagram.io/d/6042429efcdcb6230b22c857) <br/>
+[HOLA! GIT](https://github.com/Julian-Arboleda/Hola.WebApi)<br/>
 
 
 ### Created By<br/>
+[Julian Arboleda](https://github.com/Julian-Arboleda)<br/>
+[William Casteel](https://github.com/will81656)<br/>
+[Christopher Erb](https://github.com/ChristopherErb)<br/>
