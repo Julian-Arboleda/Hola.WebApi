@@ -24,7 +24,8 @@ Double click the Hola.WebAPI.sln file inside the folder you just moved to launch
 Now that you have the program open in Visual Studio, press the green Play button on the toolbar at the top.<br/>
 A window should open that looks like this: ![First Web Page Run](https://i.imgur.com/5hOKZ7s.png "Finding Your Port") <br/>
 
-Copy the information from your window that is in the same spot as the red box in the example. Note that the information will likely not be the same as the example. <br/>
+Copy the information from your window that is in the same spot as the red box in the example.<br/>
+Note that the information will likely not be the same as the example. <br/>
 Using the Port information you just copied, you are now able to use the Postman App to test the API!<br/>
 
 
@@ -33,6 +34,7 @@ Using the Port information you just copied, you are now able to use the Postman 
 [TeamGIT Postman](https://teamgit.postman.co/team)<br/>
 [Database Diagram](https://dbdiagram.io/d/6042429efcdcb6230b22c857) <br/>
 [HOLA! GIT](https://github.com/Julian-Arboleda/Hola.WebApi)<br/>
+[Eleven Note](https://elevenfifty.instructure.com/courses/581/pages/eleven-note-0-dot-00-introduction)<br/>
 
 
 ### Created By<br/>
