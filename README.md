@@ -11,7 +11,7 @@
 ⋅ Find people who are intersted in the same type of events<br/>
 
 
-### Before getting started:<br/>
+### Downloads: <br/>
 [Download](https://visualstudio.microsoft.com/downloads/) and install Visual Studio.<br/>
 [Download](https://www.postman.com/downloads/) and install the Postman App.<br/>
 [Download](https://github.com/Julian-Arboleda/Hola.WebApi/archive/master.zip) the newest version of ¡HOLA! to a location you can remember.<br/>
@@ -25,7 +25,7 @@ Now that you have the program open in Visual Studio, press the green Play button
 A window should open that looks like this: ![First Web Page Run](https://i.imgur.com/5hOKZ7s.png "Finding Your Port") <br/>
 
 Copy the information from your window that is in the same spot as the red box in the example. Note that the information will likely not be the same as the example. <br/>
-Using the Port information you just copied, you are now able to use the Postman App to test our API!<br/>
+Using the Port information you just copied, you are now able to use the Postman App to test the API!<br/>
 
 
 ### Resources<br/>
