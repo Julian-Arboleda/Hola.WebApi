@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Attendee.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="EventMessage.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Message.cs" />
