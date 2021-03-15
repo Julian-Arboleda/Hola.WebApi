@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Hola.Models
 {
-    class EventDetail
+   public class EventDetail
     {
+        public int EventId { get; set; }
+
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+        public Guid HostId { get; set; }
+        public DateTimeOffset DateCreated { get; set; }
+        public DateTimeOffset? ModifiedDateCreated { get; set; }
+
     }
 }

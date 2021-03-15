@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Hola.Data
 {
-    class EventMessage
+    public class EventMessage
     {
+
     }
 }
