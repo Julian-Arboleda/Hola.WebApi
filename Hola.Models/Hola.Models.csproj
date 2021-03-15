@@ -61,12 +61,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendeeCreate.cs" />
+    <Compile Include="AttendeeDetail.cs" />
     <Compile Include="AttendeeEdit.cs" />
     <Compile Include="AttendeeListItem.cs" />
     <Compile Include="EventCreate.cs" />
+    <Compile Include="EventDetail.cs" />
     <Compile Include="EventEdit.cs" />
     <Compile Include="EventListItem.cs" />
+    <Compile Include="EventMessageCreate.cs" />
+    <Compile Include="EventMessageListItem.cs" />
     <Compile Include="LocationCreate.cs" />
+    <Compile Include="LocationDetail.cs" />
     <Compile Include="LocationEdit.cs" />
     <Compile Include="LocationListItem.cs" />
     <Compile Include="MessageCreate.cs" />

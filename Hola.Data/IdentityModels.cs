@@ -45,7 +45,7 @@ namespace Hola.Data
         public DbSet<Event> Events { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Attendee> Attendees { get; set; }
-
+        public DbSet<EventMessage> EventMessages { get; set; }
 
 
        
