@@ -74,5 +74,24 @@ namespace Hola.WebApi.Controllers
 
             return Ok();
         }
+
+        [HttpPut]
+        [Route("{id}/ Like")]
+        public bool Like(int id)
+        {
+            var service = CreateMessageService();
+
+            var detail = service.GetMessageById(id);
+
+            var updatedMessage =
+                new MessageEdit
+                {
+                    MessageId = detail.MessageId,
+                    Content = detail.Content,
+                    IsLiked = detail.IsLiked
+                };
+
+            return service.UpdateMessage(updatedMessage);
+        }
     }
 }
