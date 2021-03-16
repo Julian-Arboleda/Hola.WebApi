@@ -19,5 +19,7 @@ namespace Hola.Models
         [Required]
         public int LocationId { get; set; }
 
+        public bool IsLiked { get; set; }
+
     }
 }

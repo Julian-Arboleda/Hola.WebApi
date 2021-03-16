@@ -22,7 +22,7 @@ namespace Hola.Services
             var entity =
                 new EventMessage()
                 {
-                    // EventId = model.EventId,
+                    EventId = model.EventId,
                     CreatorId = _userId,
                     Content = model.Content,
                     DateCreated = DateTimeOffset.Now

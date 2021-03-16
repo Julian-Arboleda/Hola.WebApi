@@ -11,6 +11,7 @@ namespace Hola.Models
     {
         public int EventMessageId { get; set; }
        // public int MessageId { get; set; }
+       // public int EventId { get; set; }
         public string Content { get; set; }
         [Display(Name = "Created")]
         public DateTimeOffset DateCreated { get; set; }

@@ -19,6 +19,8 @@ namespace Hola.Data
 
         [Required]
         public string Content { get; set; }
+
+        public bool IsLiked { get; set; }
         public DateTimeOffset DateCreated { get; set; }
         public DateTimeOffset? ModifiedDateCreated { get; set; }
 

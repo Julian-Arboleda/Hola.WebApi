@@ -15,6 +15,7 @@ namespace Hola.Models
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
         [MaxLength(1000, ErrorMessage = "There are too many characters in this field.")]
         public string Content { get; set; }
+        public bool IsLiked { get; set; }
         public DateTimeOffset DateCreated { get; set; }
     }
 }

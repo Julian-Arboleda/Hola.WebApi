@@ -26,8 +26,9 @@ namespace Hola.Services
                     Name = model.Name,
                     Description = model.Description,
                     DateCreated = model.DateCreated,
-                    LocationId = model.LocationId
-                    
+                    LocationId = model.LocationId,
+                    IsLiked = model.IsLiked
+
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -52,7 +53,8 @@ namespace Hola.Services
                                     EventId = e.EventId,
                                     Name = e.Name,
                                     DateCreated = e.DateCreated,
-                                    LocationId = e.LocationId
+                                    LocationId = e.LocationId,
+                                    IsLiked = e.IsLiked
                                 }
                         );
 
@@ -60,7 +62,38 @@ namespace Hola.Services
             }
         }
 
-        
+        public EventDetail GetEventById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Events
+                        .SingleOrDefault(e => e.EventId == id && e.HostId == _userId);
+                return
+
+                    new EventDetail
+                    {
+                        EventId = entity.EventId,
+                        Name = entity.Name,
+                        Description = entity.Description,
+                        DateCreated = entity.DateCreated,
+                        ModifiedDateCreated = entity.ModifiedDateCreated,
+                        IsLiked = entity.IsLiked
+                    };
+
+
+
+
+            }
+
+
+        }
+
+
+
+
+
 
         public bool UpdateEvent(EventEdit model)
         {
@@ -73,6 +106,7 @@ namespace Hola.Services
                 entity.EventId = model.EventId;
                 entity.Name = model.Name;
                 entity.Description = model.Description;
+                entity.IsLiked = model.IsLiked;
                 entity.DateCreated = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
@@ -111,7 +145,8 @@ namespace Hola.Services
                                     EventId = e.EventId,
                                     Name = e.Name,
                                     DateCreated = e.DateCreated,
-                                    LocationId = e.LocationId
+                                    LocationId = e.LocationId,
+                                    IsLiked = e.IsLiked
 
                                 }
                         );
@@ -121,3 +156,6 @@ namespace Hola.Services
         }
     }
 }
+
+
+
