@@ -86,6 +86,14 @@
     <Compile Include="Migrations\202103092055513_updaa.Designer.cs">
       <DependentUpon>202103092055513_updaa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103161736407_User.cs" />
+    <Compile Include="Migrations\202103161736407_User.Designer.cs">
+      <DependentUpon>202103161736407_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103161907379_idek.cs" />
+    <Compile Include="Migrations\202103161907379_idek.Designer.cs">
+      <DependentUpon>202103161907379_idek.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103092055513_updaa.resx">
       <DependentUpon>202103092055513_updaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103161736407_User.resx">
+      <DependentUpon>202103161736407_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103161907379_idek.resx">
+      <DependentUpon>202103161907379_idek.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

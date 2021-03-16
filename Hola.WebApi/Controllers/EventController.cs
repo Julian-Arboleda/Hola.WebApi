@@ -29,6 +29,14 @@ namespace Hola.WebApi.Controllers
         }
 
         [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+            EventService eventService = CreateEventService();
+            var eventServices = eventService.GetEventById(id);
+            return Ok(eventServices);
+        }
+
+        [HttpGet]
         public IHttpActionResult GetEventByLocationId(int locationId)
         {
             EventService eventService = CreateEventService();
@@ -73,6 +81,27 @@ namespace Hola.WebApi.Controllers
                 return InternalServerError();
 
             return Ok();
+        }
+
+        [HttpPut]
+        [Route("{id}/ Like")]
+        public bool Like(int id)
+        {
+            var service = CreateEventService();
+
+            var detail = service.GetEventById(id);
+
+            var updatedEvent =
+                new EventEdit
+                {
+                    EventId = detail.EventId,
+                    Name = detail.Name,
+                    Description = detail.Description,
+                    DateCreated = detail.DateCreated,
+                    IsLiked = detail.IsLiked
+                };
+
+            return service.UpdateEvent(updatedEvent);
         }
 
     }   

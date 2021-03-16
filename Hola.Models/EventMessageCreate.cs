@@ -12,6 +12,8 @@ namespace Hola.Models
         [Required]
         [MaxLength(800, ErrorMessage = "There are too many characters in this field.")]
         public string Content { get; set; }
+        [Required]
+        public int EventId { get; set; }
         public DateTimeOffset DateCreated { get; set; }
     }
 }

@@ -11,5 +11,6 @@ namespace Hola.Models
         public int MessageId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
+        public bool IsLiked { get; set; }
     }
 }

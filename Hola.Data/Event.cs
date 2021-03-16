@@ -17,7 +17,9 @@ namespace Hola.Data
         public string Name { get; set; }
         [Required]
         public string Description { get; set; }
-       
+
+        public bool IsLiked { get; set; }
+
         public Guid HostId { get; set; }
         public DateTimeOffset DateCreated { get; set; }
         public DateTimeOffset? ModifiedDateCreated { get; set; }

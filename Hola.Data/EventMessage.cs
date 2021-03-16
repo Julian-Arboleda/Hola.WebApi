@@ -24,7 +24,7 @@ namespace Hola.Data
         public int EventId { get; set; }
         public virtual Event Event { get; set; }
 
-        [ForeignKey(nameof(ApplicationUser))]
+        [ForeignKey("User")]
         public string Id { get; set; }
         public virtual ApplicationUser User { get; set; }
     }
