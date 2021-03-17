@@ -1,6 +1,3 @@
-# **__NotDone__** 
-
-
 ¡HOLA!
 ======
 *[¡HOLA!](https://github.com/Julian-Arboleda/Hola.WebApi) lets you find local events and connect with the friends you made there!*
