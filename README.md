@@ -23,7 +23,7 @@
 Drag and drop the Hola.WebApi-Master folder from the file you dowloaded to unzip it.<br/>
 Double click the Hola.WebAPI.sln file inside the folder you just moved to launch the program using Visual Studio.<br/>
 Now that you have the program open in Visual Studio, press the green Play button on the toolbar at the top.<br/>
-A window should open that looks like this:<br/> ![First Web Page Run](https://i.imgur.com/rqZ7EfF.png "Finding Your Port") <br/>
+A window should open that looks like this:<br/> ![First Web Page Run](https://i.imgur.com/7Zb2w7k.png "Finding Your Port") <br/>
 
 Copy the information from your window that is in the same spot as the red box in the example.<br/>
 Note that the information will likely not be the same as the example. <br/>
