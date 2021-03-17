@@ -7,8 +7,9 @@
 
 ### Features<br/>
 ⋅ Find events in your area!<br/>
-⋅ Connect with others who have attended the same events<br/>
-⋅ Find people who are intersted in the same type of events<br/>
+⋅ Find people who you share interests with!<br/>
+⋅ Connect with others who have attended the same events!<br/>
+⋅ Keep in touch with friends using a newly added message system!<br/>
 
 
 ### Downloads <br/>
