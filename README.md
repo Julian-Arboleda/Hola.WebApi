@@ -39,3 +39,8 @@ Using the Port information you just copied, you are now able to use the Postman 
 ⋅ [Julian Arboleda](https://github.com/Julian-Arboleda)<br/>
 ⋅ [William Casteel](https://github.com/will81656)<br/>
 ⋅ [Christopher Erb](https://github.com/ChristopherErb)<br/>
+
+
+### Common Errors <br/>
+##### How can I  fix an error that says Roslyn?<br/>
+###### One potential fix for this error: right click on the project's solution in the solution explorer (Ctrl + Alt + L to open the window if it's not open), select Clean Solution, then select Rebuild Solution.  After rebuilding the solution it should launch as normal. 
