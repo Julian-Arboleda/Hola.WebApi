@@ -1,6 +1,6 @@
-¡HOLA!
+HOLA!
 ======
-*[¡HOLA!](https://github.com/Julian-Arboleda/Hola.WebApi) lets you find local events and connect with the friends you made there!*
+*[HOLA!](https://github.com/Julian-Arboleda/Hola.WebApi) lets you find local events and connect with the friends you made there!*
 
 ### Features<br/>
 ⋅ Find events in your area!<br/>
