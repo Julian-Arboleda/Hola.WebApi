@@ -27,7 +27,8 @@ namespace Hola.Services
                     Description = model.Description,
                     DateCreated = model.DateCreated,
                     LocationId = model.LocationId,
-                    IsLiked = model.IsLiked
+                    IsLiked = model.IsLiked,
+                    Host = model.Host
 
                 };
 
@@ -54,7 +55,9 @@ namespace Hola.Services
                                     Name = e.Name,
                                     DateCreated = e.DateCreated,
                                     LocationId = e.LocationId,
-                                    IsLiked = e.IsLiked
+                                    IsLiked = e.IsLiked,
+                                    Description = e.Description,
+                                    Host = e.Host
                                 }
                         );
 
@@ -79,7 +82,8 @@ namespace Hola.Services
                         Description = entity.Description,
                         DateCreated = entity.DateCreated,
                         ModifiedDateCreated = entity.ModifiedDateCreated,
-                        IsLiked = entity.IsLiked
+                        IsLiked = entity.IsLiked,
+                        Host = entity.Host
                     };
 
 

@@ -10,6 +10,8 @@ namespace Hola.Models
     public class EventListItem
     {
         public int EventId { get; set; }
+        public string Host { get; set; }
+        public string Description { get; set; }
         
         public string Name { get; set; }
 

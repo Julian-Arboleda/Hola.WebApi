@@ -98,7 +98,8 @@ namespace Hola.WebApi.Controllers
                     Name = detail.Name,
                     Description = detail.Description,
                     DateCreated = detail.DateCreated,
-                    IsLiked = detail.IsLiked
+                    IsLiked = detail.IsLiked,
+                    Host = detail.Host
                 };
 
             return service.UpdateEvent(updatedEvent);

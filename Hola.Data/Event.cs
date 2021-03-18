@@ -18,6 +18,8 @@ namespace Hola.Data
         [Required]
         public string Description { get; set; }
 
+        public string Host { get; set; }
+
         public bool IsLiked { get; set; }
 
         public Guid HostId { get; set; }

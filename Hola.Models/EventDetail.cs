@@ -15,6 +15,7 @@ namespace Hola.Models
         public string Description { get; set; }
         [Display(Name = "Liked")]
         public bool IsLiked { get; set; }
+        public string Host { get; set; }
 
         public Guid HostId { get; set; }
         public DateTimeOffset DateCreated { get; set; }

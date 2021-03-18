@@ -94,8 +94,19 @@
     <Compile Include="Migrations\202103161907379_idek.Designer.cs">
       <DependentUpon>202103161907379_idek.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103181543233_addhosttoevent.cs.cs" />
+    <EmbeddedResource Include="Migrations\202103181543233_addhosttoevent.cs.Designer.cs">
+      <DependentUpon>202103181543233_addhosttoevent.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Migrations\202103181553574_stillnotsur.cs" />
+    <Compile Include="Migrations\202103181553574_stillnotsur.Designer.cs">
+      <DependentUpon>202103181553574_stillnotsur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Migrations\202103181553574_stillnotsur.resx">
+      <DependentUpon>202103181553574_stillnotsur.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -114,6 +125,7 @@
     <EmbeddedResource Include="Migrations\202103161907379_idek.resx">
       <DependentUpon>202103161907379_idek.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103181543233_addhosttoevent.cs.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
